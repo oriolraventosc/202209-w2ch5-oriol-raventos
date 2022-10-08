@@ -1,18 +1,15 @@
 class Cell {
   alive;
-  dead;
 
-  isAlive() {
+  live() {
     this.alive = true;
   }
 
   die() {
-    this.dead = true;
     this.alive = false;
   }
 
-  resurrection() {
-    this.dead = false;
+  resurrect() {
     this.alive = true;
   }
 }
