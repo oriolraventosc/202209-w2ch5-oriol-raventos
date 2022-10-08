@@ -11,3 +11,9 @@ cómo son las reglas?
 tiene que funcionar sin verse con console.log y luego con html
 
 El ejercicio es una array con array como elementos del array y se trata de un for sobre otro for
+
+## To do:
+
+Done:
+-Clase cel con alive true o false
+-Creador de tablero de arrays
