@@ -1,5 +1,5 @@
 class Cell {
-  isAlive;
+  isAlive = false;
 
   live() {
     this.isAlive = true;

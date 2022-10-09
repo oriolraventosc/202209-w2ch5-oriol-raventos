@@ -14,6 +14,8 @@ El ejercicio es una array con array como elementos del array y se trata de un fo
 
 ## To do:
 
+Fer un set interval que repeteixi el bucle de check neighbours i tot dins del set interval.
+
 Done:
 -Clase cel con alive true o false
 -Creador de tablero de arrays
