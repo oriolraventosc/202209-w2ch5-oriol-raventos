@@ -1,6 +1,10 @@
 class Cell {
   isAlive = false;
 
+  constructor() {
+    this.isAlive = false;
+  }
+
   live() {
     this.isAlive = true;
   }

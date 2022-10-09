@@ -4,26 +4,43 @@ const checkNeighbourCells = () => {
   let neighbours;
   const column = addCellsToTheBoard();
   for (let y = 0; y < column.length; y++) {
+    neighbours = 0;
     for (let x = 0; x < column[y].length; x++) {
-      neighbours = 0;
-      if (column[y][x].isAlive) {
+      if (column[y][x]) {
         if (column[y + 1] !== undefined && column[y + 1][x] !== undefined) {
           neighbours++;
-          if (neighbours < 2) {
-            column[y][x].isAlive = false;
-            if (neighbours > 3) {
-              column[y][x].isAlive = true;
-            }
-          } else if (neighbours > 2 || neighbours === 3) {
-            column[y][x].isAlive = true;
-          }
+        } else if (
+          column[y - 1] !== undefined &&
+          column[y - 1][x] !== undefined
+        ) {
+          neighbours++;
+        } else if (
+          column[y + 1] !== undefined &&
+          column[y][x - 1] !== undefined
+        ) {
+          neighbours++;
+        } else if (
+          column[y - 1] !== undefined &&
+          column[y][x + 1] !== undefined
+        ) {
+          neighbours++;
+        } else if (column[y - 1] !== undefined && column[y][x] !== undefined) {
+          neighbours++;
+        } else if (column[y] !== undefined && column[y][x - 1] !== undefined) {
+          neighbours++;
         }
-      } else {
-        column[y][x].isAlive = true;
+        if (
+          (column[y][x].isAlive && neighbours < 2) ||
+          (neighbours > 3 && column[y][x].isAlive === true)
+        ) {
+          column[y][x].isAlive = false;
+        } else if (column[y][x].isAlive === false && neighbours === 3) {
+          column[y][x].isAlive = true;
+        }
       }
     }
   }
-  console.log(column);
+  return column;
 };
 
 export default checkNeighbourCells;
