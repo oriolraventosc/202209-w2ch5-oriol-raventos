@@ -1,3 +1,4 @@
-.main_title {
-  color: red;
-}
+@use "./components/_globals.scss";
+@use "./components/header/_menu.scss";
+@use "./components/main-block/main-block";
+@use "./components/footer/footer";
