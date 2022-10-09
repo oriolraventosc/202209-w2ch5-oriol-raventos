@@ -1,6 +1,6 @@
 import addCellsToTheBoard from "../addCells/addCellsToTheBoard.js";
 
-export const checkNeighbourCells = () => {
+const checkNeighbourCells = () => {
   let neighbours;
   const column = addCellsToTheBoard();
   for (let y = 0; y < column.length; y++) {
