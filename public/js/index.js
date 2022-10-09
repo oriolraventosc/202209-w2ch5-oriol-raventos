@@ -1,3 +1,3 @@
 import checkNeighbourCells from "./checkNeighbourCells/checkNeighbourCells.js";
 
-checkNeighbourCells();
+setInterval(checkNeighbourCells, 3000);
