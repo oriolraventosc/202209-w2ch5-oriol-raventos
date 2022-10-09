@@ -1,0 +1,11 @@
+.main-block img {
+  width: 100vw;
+  object-fit: cover;
+  height: 80vh;
+}
+
+.main-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
