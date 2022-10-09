@@ -17,7 +17,6 @@ const addCellsToTheBoard = () => {
       column[4][0].isAlive = true;
     }
   }
-  console.log(column);
   return column;
 };
 

@@ -40,7 +40,7 @@ const checkNeighbourCells = () => {
       }
     }
   }
-  return column;
+  console.log(column);
 };
 
 export default checkNeighbourCells;
